@@ -1,75 +1,168 @@
-*{
-  margin: 0;
-  padding: 0;
+:root {
+  --primary-color: #DEAA79;
+  --secondary-color: #659287;
+  --light-color: #FFE6A9;
+  --dark-color: #2C3E50;
+  --danger-color: #dc3545;
+  --success-color: #198754;
 }
-.body{
-  background-color: #DEAA79;
-  color: #d2f5ec;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  text-size-adjust: 80% ;
+
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--dark-color);
 }
-.body{
-  width: 80%;
-  margin: auto;
+
+/* Navbar Styles */
+.navbar {
+  background-color: var(--primary-color);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-.head{
-  text-align: center;
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
 }
-input{
-  width: 100%;
-  height: 30px;
-  background: #FFE6A9;
-  outline: none;
+
+/* Card Styles */
+.card {
   border: none;
-  margin: 4px 0;
-  border-radius: 4px;
-  padding: 4px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border-radius: 8px;
 }
-input:focus{
-  background-color: aliceblue;
-  transform: scale(1.1);
+
+.card-title {
+  color: var(--dark-color);
+  font-weight: 600;
 }
-.price input{
-  width: 20%;
+
+/* Form Controls */
+.form-control {
+  border: 1px solid #ced4da;
+  padding: 0.75rem;
 }
-#total{
-  background-color: #d2f5ec;
-  padding: 6px 2px;
-  border-radius: 4px;
-  color: #e3b25c;
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(222, 170, 121, 0.25);
 }
-#total::after{
-  content: '';
-}
-button{
-  width: 100%;
-  height: 30px;
-  border: none;
-  background-color: #659287;
-  color: #FFE6A9;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: 1s;
-}
-button:hover{
-  background-color: #B1C29E;
-  letter-spacing: 1px;
-}
-.btnSearch{
+
+/* Price Inputs Section */
+.price-inputs {
   display: flex;
-  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
 }
-.btnSearch button{
-  width: 45%;
+
+.price-inputs .form-control {
+  flex: 1;
 }
-table{
-  width: 100%;
+
+/* Total Display */
+.total-display {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  min-width: 120px;
   text-align: center;
-  margin: 10px 0;
+  display: inline-block;
 }
-table th{
-  text-transform: uppercase;
+
+/* Buttons */
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
-th,td{
-  padding: 5px;
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #c89563;
+  border-color: #c89563;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+  background-color: #517a70;
+  border-color: #517a70;
+}
+
+/* Search Container */
+.search-container {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Table Styles */
+.table {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.table thead th {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 500;
+  padding: 1rem;
+  border: none;
+}
+
+.table tbody td {
+  padding: 1rem;
+  vertical-align: middle;
+}
+
+.table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Action Buttons in Table */
+.table .btn {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.btn-delete {
+  background-color: var(--danger-color);
+  border-color: var(--danger-color);
+  color: white;
+}
+
+.btn-update {
+  background-color: var(--success-color);
+  border-color: var(--success-color);
+  color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .price-inputs {
+      flex-direction: column;
+      gap: 0.5rem;
+  }
+  
+  .total-display {
+      width: 100%;
+      margin-top: 0.5rem;
+  }
+  
+  .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+  }
 }
