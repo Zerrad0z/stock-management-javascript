@@ -1,0 +1,75 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.body{
+  background-color: #DEAA79;
+  color: #d2f5ec;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-size-adjust: 80% ;
+}
+.body{
+  width: 80%;
+  margin: auto;
+}
+.head{
+  text-align: center;
+}
+input{
+  width: 100%;
+  height: 30px;
+  background: #FFE6A9;
+  outline: none;
+  border: none;
+  margin: 4px 0;
+  border-radius: 4px;
+  padding: 4px;
+}
+input:focus{
+  background-color: aliceblue;
+  transform: scale(1.1);
+}
+.price input{
+  width: 20%;
+}
+#total{
+  background-color: #d2f5ec;
+  padding: 6px 2px;
+  border-radius: 4px;
+  color: #e3b25c;
+}
+#total::after{
+  content: '';
+}
+button{
+  width: 100%;
+  height: 30px;
+  border: none;
+  background-color: #659287;
+  color: #FFE6A9;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 1s;
+}
+button:hover{
+  background-color: #B1C29E;
+  letter-spacing: 1px;
+}
+.btnSearch{
+  display: flex;
+  justify-content: space-between;
+}
+.btnSearch button{
+  width: 45%;
+}
+table{
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+}
+table th{
+  text-transform: uppercase;
+}
+th,td{
+  padding: 5px;
+}
